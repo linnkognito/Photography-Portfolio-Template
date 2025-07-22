@@ -23,7 +23,7 @@ function Work() {
     >
       <h2 className='pb-19 xl:pb-28'>Work</h2>
 
-      <section className='flex-col gap-20 w-full'>
+      <section className='flex-col gap-20 w-full  max-w-content-xl mx-auto'>
         <div className='w-full h-full'>
           <h3 className='pl-4 xl:pl-8 text-blossom pb-6 md:pb-7 xl:pb-10'>
             2025

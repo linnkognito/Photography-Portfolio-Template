@@ -5,7 +5,11 @@
   --slide-spacing: 24px;
   --slide-size: 90%;
 }
-
+@media (min-width: 700px) {
+  .embla {
+    --slide-size: 50%;
+  }
+}
 @media (min-width: 1280px) {
   .embla {
     --slide-spacing: 40px;

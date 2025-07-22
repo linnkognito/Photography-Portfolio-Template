@@ -2,6 +2,11 @@
 
 @layer base {
   @theme {
+    --breakpoint-md: 854px;
+    --breakpoint-xl: 1341px;
+
+    --border-radius-img: 24px;
+
     --color-blossom-light: #fef5f0;
     --color-blossom: #fed8e5;
     --color-blossom-dark: #fd8eac;
@@ -10,7 +15,9 @@
     --color-bigarreau: #641228;
     --color-bigarreau-dark: #2e0116;
 
-    --border-radius-img: 24px;
+    --font-sans: 'Inter', sans-serif;
+
+    --spacing-content-xl: 1200px;
   }
   html {
     color: var(--color-blossom-light);
@@ -18,6 +25,7 @@
     background-color: var(--color-blossom);
   }
   ::selection {
+    color: var(--color-blossom-light);
     background-color: rgba(240, 69, 85, 0.7);
   }
 
@@ -25,17 +33,20 @@
     @apply text-blossom text-[clamp(4rem,12vw,12.5rem)] tracking-[0.2%] leading-tight font-black;
   }
   h2 {
-    @apply text-[64px] md:text-[84px] xl:text-[128px] font-black leading-[125%] tracking-[0.2%];
+    @apply text-[64px] md:text-[84px] lg:text-[104px] xl:text-[128px] font-black leading-[125%] tracking-[0.2%];
   }
   h3 {
-    @apply text-4xl md:text-5xl xl:text-7xl font-black tracking-[0.2%];
+    @apply text-[clamp(2.25rem,12vw,3rem)] font-black tracking-[0.2%];
   }
-  p {
-    @apply text-lg md:text-[28px] leading-[1.25] md:leading-[1.35] tracking-[0.2%];
+  .text-body {
+    @apply text-lg md:text-xl lg:text-2xl xl:text-[28px] leading-[1.35] tracking-[0.2%];
   }
 
   .text-subheading {
     @apply text-blossom text-2xl md:text-[40px] font-black tracking-[0.2%] leading-[1.25];
+  }
+  .max-w-content-xl {
+    @apply max-w-[var(--spacing-content-xl)];
   }
   .flex-col {
     @apply flex flex-col;

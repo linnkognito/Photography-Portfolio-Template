@@ -6,7 +6,7 @@ function About() {
   return (
     <section
       className='
-    flex-col-center w-full
+    flex-col-center w-full max-w-content-xl mx-auto
     px-4 md:px-6 lg:px-12
     pt-14 pb-16 md:pb-24 lg:pt-20 lg:pb-32
     '
@@ -15,8 +15,8 @@ function About() {
 
       <section
         className='
-        flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 xl:gap-14 w-full
-        md:pl-4 md:pr-8 xl:px-28
+        flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 xl:gap-14 w-full max-md:max-w-[412px]
+        md:pl-4 md:pr-8
         '
       >
         <PhotoFrame
@@ -35,8 +35,8 @@ function About() {
         </PhotoFrame>
 
         <div className='flex flex-col justify-around items-center gap-16 md:gap-10 xl:gap-12  w-full h-full'>
-          <div className='bg-bigarreau px-7 py-8 md:px-12 xl:px-16 xl:py-12 rounded-img'>
-            <p className='text-center md:text-justify md:hyphens-auto'>
+          <div className='bg-bigarreau px-8 py-10 md:px-12 xl:px-16 xl:py-12 rounded-img'>
+            <p className='text-body text-center md:text-justify md:hyphens-auto'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

@@ -19,7 +19,7 @@ const EmblaCarousel = (props) => {
               key={index}
               onClick={() => emblaApi.scrollTo(index)}
             >
-              <section role='group' key={image.alt} className='w-full'>
+              <section role='group' key={image.alt}>
                 {/* Image */}
                 <PhotoFrame variant='blossom'>
                   <div className='relative aspect-4/3 rounded-img overflow-hidden'>
