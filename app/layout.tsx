@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Kumbh_Sans } from 'next/font/google';
+import './_styles/embla.css';
 import './globals.css';
 
 const kumbhSans = Kumbh_Sans({

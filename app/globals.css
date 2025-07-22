@@ -27,6 +27,9 @@
   h2 {
     @apply text-[64px] md:text-[84px] xl:text-[128px] font-black leading-[125%] tracking-[0.2%];
   }
+  h3 {
+    @apply text-4xl md:text-5xl xl:text-7xl font-black tracking-[0.2%];
+  }
   p {
     @apply text-lg md:text-[28px] leading-[1.25] md:leading-[1.35] tracking-[0.2%];
   }
