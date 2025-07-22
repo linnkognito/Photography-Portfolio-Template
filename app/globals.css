@@ -1,26 +1,41 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  @theme {
+    --color-blossom-light: #fef5f0;
+    --color-blossom: #fed8e5;
+    --color-blossom-dark: #fd8eac;
+    --color-cherry: #f04555;
+    --color-cherry-dark: #e1233c;
+    --color-bigarreau: #641228;
+    --color-bigarreau-dark: #2e0116;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --border-radius-img: 24px;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html {
+    color: var(--color-blossom-light);
+    font-family: var(--font-sans);
+    background-color: var(--color-blossom);
+  }
+  ::selection {
+    background-color: rgba(240, 69, 85, 0.7);
+  }
+  h1 {
+    @apply text-blossom text-[clamp(4rem,12vw,12.5rem)] tracking-[0.2%] leading-tight font-black;
+  }
+  .text-subheading {
+    @apply text-blossom text-2xl md:text-[40px] font-black tracking-[0.2%] leading-[1.25];
+  }
+  .flex-col {
+    @apply flex flex-col;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+  .rounded-img {
+    @apply rounded-[var(--border-radius-img)];
+  }
 }
