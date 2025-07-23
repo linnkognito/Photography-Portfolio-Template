@@ -41,6 +41,25 @@ export default {
               of: [
                 {
                   type: 'image',
+                  options: {
+                    hotspot: true,
+                  },
+                  fields: [
+                    {
+                      name: 'alt',
+                      type: 'string',
+                      title: 'Description',
+                      description: 'Describe the image for screen readers.',
+                      validation: (Rule) => Rule.required(),
+                    },
+                    {
+                      name: 'caption',
+                      type: 'string',
+                      title: 'Caption',
+                      description: 'Image caption. Defaults to "Untitled"',
+                      initialValue: 'Untitled',
+                    },
+                  ],
                 },
               ],
             },

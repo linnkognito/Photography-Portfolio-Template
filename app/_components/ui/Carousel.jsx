@@ -4,6 +4,7 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 import PhotoFrame from './PhotoFrame';
+import urlFor from '@/lib/sanity/urlFor';
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
@@ -24,9 +25,10 @@ const EmblaCarousel = (props) => {
                 <PhotoFrame variant='blossom'>
                   <div className='relative aspect-4/3 rounded-img overflow-hidden'>
                     <Image
-                      src={image.src}
-                      alt={image.alt}
+                      src={urlFor(image).url()}
+                      alt={image.caption || 'Image'}
                       fill
+                      sizes='600px'
                       className='object-cover object-center'
                     />
                   </div>

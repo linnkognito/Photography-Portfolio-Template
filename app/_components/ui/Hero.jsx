@@ -1,6 +1,11 @@
+import fetchSanityData from '@/lib/sanity/fetch';
+import urlFor from '@/lib/sanity/urlFor';
 import Image from 'next/image';
 
-function Hero() {
+async function Hero() {
+  const hero = await fetchSanityData('hero');
+  const { firstName, lastName, subHeading, image } = hero;
+
   return (
     <section
       className='
@@ -9,28 +14,32 @@ function Hero() {
         bg-cherry-dark
     '
     >
-      <div className='flex-col items-center justify-center min-h-fit max-lg:pb-10 max-lg:pl-10'>
+      <div className='flex-col max-sm:items-center max-sm:justify-center lg:justify-center min-h-fit max-lg:pb-[112px] sm:pl-10'>
         <h1 className='w-fit flex flex-wrap uppercase'>
-          <span className='lg:hidden'>Jane Doe</span>
+          <span className='lg:hidden'>
+            {firstName} {lastName || ''}
+          </span>
 
           <span className='flex flex-col mx-auto max-lg:hidden leading-none'>
-            <span className='text-right pb-10'>Jane</span>
-            <span className='text-right lg:-mt-[70px]'>Doe</span>
+            <span className='text-right pb-10'>{firstName}</span>
+            {lastName && (
+              <span className='text-right lg:-mt-[70px]'>{lastName}</span>
+            )}
           </span>
         </h1>
 
-        <h2 className='text-subheading -mt-[6px] pl-[16px] md:pl-9 font-semibold tracking-[0.2%]'>
-          Street photographer
+        <h2 className='text-subheading -mt-[6px] pl-7 md:pl-9 lg:pt-6 font-semibold tracking-[0.2%]'>
+          {subHeading}
         </h2>
       </div>
 
       <Image
-        src='/hero.jpg'
-        alt='Hero'
+        src={urlFor(image).url()}
+        alt='Hero Image'
         width={0}
         height={0}
         priority
-        sizes='100vw'
+        sizes='1000px'
         className='w-full h-auto lg:h-full lg:w-auto rounded-img'
       />
     </section>

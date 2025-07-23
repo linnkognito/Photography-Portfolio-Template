@@ -1,14 +1,12 @@
 export default {
   name: 'socials',
-  title: 'Social media icons',
+  title: 'Socials',
   type: 'document',
   fields: [
     // Common platforms
     {
       name: 'platforms',
       title: 'Choose from common platforms',
-      description:
-        'If the social media platform you are looking for does not exist in this list, you can manually add a custom platform & link below.',
       type: 'array',
       of: [
         {

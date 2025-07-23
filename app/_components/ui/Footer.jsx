@@ -24,7 +24,7 @@ async function Footer() {
         className='w-full max-w-[128px] md:max-w-[180px] xl:max-w-[220px]'
       >
         <h4 className='text-cherry-dark font-black text-5xl md:text-[64px] xl:text-[80px] md:tracking-[0.2%] uppercase text-right'>
-          {hero.mainHeading}
+          {hero.firstName} {hero.lastName || ''}
         </h4>
       </Link>
 

@@ -8,8 +8,6 @@ async function About() {
   const about = await fetchSanityData('about');
   const { heading, image, bio, buttonLabel } = about;
 
-  console.log(image);
-
   return (
     <section
       className='
@@ -22,7 +20,7 @@ async function About() {
 
       <section
         className='
-        flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 xl:gap-14 w-full max-md:max-w-[412px]
+        flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 xl:gap-14 w-full max-w-[412px] md:max-w-[1000px]
         md:pl-4 md:pr-8
         '
       >
@@ -32,10 +30,10 @@ async function About() {
         >
           <div className='relative w-full h-full overflow-hidden rounded-img'>
             <Image
-              src={urlFor(image.asset._ref).url()}
-              alt={'Profile Picture'}
+              src={urlFor(image).url()}
+              alt='Profile Picture'
               fill
-              sizes='100vw'
+              sizes='50vw'
               className='object-cover'
             />
           </div>

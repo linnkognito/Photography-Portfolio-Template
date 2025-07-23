@@ -4,12 +4,17 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'mainHeading',
+      name: 'firstName',
       type: 'string',
-      title: 'Main Heading',
-      description: 'Enter your name here.',
-      placeholder: 'Jane Doe',
+      title: 'First Name',
+      placeholder: 'Jane',
       validation: (Rule) => Rule.required().min(1).error('Required field'),
+    },
+    {
+      name: 'lastName',
+      type: 'string',
+      title: 'Last Name',
+      placeholder: 'Doe',
     },
     {
       name: 'subHeading',
