@@ -30,7 +30,7 @@
   }
 
   h1 {
-    @apply text-blossom text-[clamp(4rem,12vw,12.5rem)] tracking-[0.2%] leading-tight font-black;
+    @apply text-blossom text-[clamp(4rem,12vw,12.5rem)] tracking-[0.2%] leading-tight lg:leading-none font-black;
   }
   h2 {
     @apply text-[64px] md:text-[84px] lg:text-[104px] xl:text-[128px] font-black leading-[125%] tracking-[0.2%];
@@ -43,7 +43,7 @@
   }
 
   .text-subheading {
-    @apply text-blossom text-2xl md:text-[40px] font-black tracking-[0.2%] leading-[1.25];
+    @apply text-blossom text-2xl sm:text-3xl md:text-[40px] font-black tracking-[0.2%] leading-[1.25];
   }
   .max-w-content-xl {
     @apply max-w-[var(--spacing-content-xl)];

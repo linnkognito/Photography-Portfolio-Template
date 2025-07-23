@@ -7,7 +7,7 @@
 }
 @media (min-width: 700px) {
   .embla {
-    --slide-size: 50%;
+    --slide-size: 45%;
   }
 }
 @media (min-width: 1280px) {

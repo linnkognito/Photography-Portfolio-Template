@@ -33,7 +33,7 @@ function Work() {
 
         <div className='w-full h-full'>
           <h3 className='pl-4 xl:pl-8 text-blossom pb-6 md:pb-7 xl:pb-10'>
-            2025
+            2024
           </h3>
           <Carousel slides={testSlides2} options={{ loop: false }} />
         </div>
