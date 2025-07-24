@@ -14,7 +14,7 @@ async function Hero() {
         bg-cherry-dark
     '
     >
-      <div className='flex-col max-sm:items-center max-sm:justify-center lg:justify-center min-h-fit max-lg:pb-[112px] sm:pl-10'>
+      <div className='flex-col max-sm:items-center max-sm:justify-center lg:items-center lg:justify-center min-h-fit max-lg:pb-[112px] pl-[10px] sm:pl-10'>
         <h1 className='w-fit flex flex-wrap uppercase'>
           <span className='lg:hidden'>
             {firstName} {lastName || ''}
@@ -28,7 +28,7 @@ async function Hero() {
           </span>
         </h1>
 
-        <h2 className='text-subheading -mt-[6px] pl-7 md:pl-9 lg:pt-6 font-semibold tracking-[0.2%]'>
+        <h2 className='text-subheading -mt-[6px]  md:pl-9 lg:pt-6 font-semibold tracking-[0.2%]'>
           {subHeading}
         </h2>
       </div>
