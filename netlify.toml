@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Optional: only rebuild when frontend changes
+[build.environment]
+  NODE_VERSION = "22"
+
+# Tell Netlify to skip the build if only Studio files changed
+[functions]
+  node_bundler = "esbuild"
